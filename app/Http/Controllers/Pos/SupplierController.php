@@ -46,8 +46,8 @@ class SupplierController extends Controller
             'mobiile_no' => $request->mobiile_no,
             'email' => $request->email,
             'adderss' => $request->adderss,
-            'create_by' => Auth::user()->id,
-            'created_at' => Carbon::now(),
+            'update_by' => Auth::user()->id,
+            'updated_at' => Carbon::now(),
         ]);
         $notification = array(
             'message' => 'Cập nhật thành công', 
