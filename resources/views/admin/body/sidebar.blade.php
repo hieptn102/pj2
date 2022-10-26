@@ -40,10 +40,30 @@
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="ri-mail-send-line"></i>
-                                    <span>Quản lí</span>
+                                    <span>Đơn vị</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('unit.all')}}">Danh sách các đơn vị</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="ri-mail-send-line"></i>
+                                    <span>Danh mục</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{route('category.all')}}">Quản lí danh mục</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="ri-mail-send-line"></i>
+                                    <span>Sản phẩm</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{route('product.all')}}">Quản lí sản phẩm</a></li>
                                 </ul>
                             </li>
 
@@ -77,11 +97,6 @@
                                     <li><a href="pages-500.html">Error 500</a></li>
                                 </ul>
                             </li>
-
-                           
-
-                            
-                         
 
                         </ul>
                     </div>
