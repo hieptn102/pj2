@@ -8,17 +8,17 @@ use App\Http\Controllers\Pos\CustomerController;
 use App\Http\Controllers\Pos\UnitController;
 use App\Http\Controllers\Pos\CategoryController;
 use App\Http\Controllers\Pos\ProductController;
+use App\Http\Controllers\Pos\PurchaseController;
+use App\Http\Controllers\Pos\DefaultController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::controller(DemoController::class)->group(function () {
     Route::get('/about', 'Index')->name('about.page')->middleware('check');
     Route::get('/contact', 'ContactMethod')->name('cotact.page');
 });
-
 
  // Admin All Route 
 Route::controller(AdminController::class)->group(function () {
@@ -26,7 +26,6 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/admin/profile', 'Profile')->name('admin.profile');
     Route::get('/edit/profile', 'EditProfile')->name('edit.profile');
     Route::post('/store/profile', 'StoreProfile')->name('store.profile');
-
     Route::get('/change/password', 'ChangePassword')->name('change.password');
     Route::post('/update/password', 'UpdatePassword')->name('update.password');
      
@@ -83,8 +82,19 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/product/delete/{id}', 'ProductDelete')->name('product.delete');
 });
 
+ // Purchase All Route 
+ Route::controller(PurchaseController::class)->group(function () {
+    Route::get('/purchase/all', 'PurchaseAll')->name('purchase.all');
+    Route::get('/purchase/add', 'PurchaseAdd')->name('purchase.add');
+});
 
- 
+  // Default All Route 
+  Route::controller(DefaultController::class)->group(function () {
+    Route::get('/get-category', 'GetCategory')->name('get-category');
+    Route::get('/get-product', 'GetProduct')->name('get-product');
+
+});
+
 
 
 
