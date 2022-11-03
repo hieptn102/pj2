@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Pos;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Purchase;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DefaultController extends Controller
 {
@@ -20,4 +22,5 @@ class DefaultController extends Controller
         $allProduct = Product::where('category_id',$category_id)->get();
         return response()->json($allProduct);
     }
+    
 }
