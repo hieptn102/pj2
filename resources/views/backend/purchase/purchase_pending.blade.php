@@ -9,7 +9,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0">Đơn hàng</h4>
+                                    <h4 class="mb-sm-0">Phê duyệt đơn hàng</h4>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                             </td>                    
                             <td>
                                 @if($item->status == '0')
-                                <a href="{{ route('purchase.delete' ,$item->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete">  <i class="fas fa-trash-alt"></i> </a>
+                                <a href="{{ route('purchase.approve' ,$item->id)}}" class="btn btn-danger sm" title="Approved" id="ApprovedBtn">  <i class="fas fa-check-circle"></i> </a>
                                 @endif
                             </td>
                            
