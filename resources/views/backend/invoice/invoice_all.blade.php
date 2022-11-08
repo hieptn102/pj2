@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <a href="{{ route('invoice.add')}}" class="btn btn-dark btn-rounded waves-effect waves-light" style="float:right">Thêm mới hóa đơn</a>
                     <br><br>
-                    <h4 class="card-title">Danh sách đơn hàng</h4>
+                    <h4 class="card-title">Danh sách hóa đơn</h4>
                     
 
                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -48,7 +48,7 @@
                             <td> {{ $item->description}} </td>                  
                             <td>
                                
-                                <a href="{{ route('purchase.delete' ,$item->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete">  <i class="fas fa-trash-alt"></i> </a>
+                                <a href="{{ route('invoice.delete' ,$item->id)}}" class="btn btn-danger sm" title="Delete Data" id="delete">  <i class="fas fa-trash-alt"></i> </a>
                             </td>
                            
                         </tr>
