@@ -26,7 +26,7 @@ class InvoiceController extends Controller
     }
 
     public function InvoiceAdd(){
-        
+        $customer = Customer::all();
         $category = Category::all();
         $invoice_data = Invoice::orderBy('id','desc')->first();
         if ($invoice_data == null) {
